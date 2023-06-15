@@ -22,10 +22,10 @@ export default {
                 <p> non ci sono tecnologie </p>
             </div>
 
-            <h6>lista tipi</h6>
-            <ul v-if="(project.type)">
-                <li v-for="elem,index in project.type" :key="index">{{ elem.name }}</li>
-            </ul>
+            <h6>tipo</h6>
+            <p v-if="(project.type)">
+                {{ project.type.name }}
+            </p>
             <div v-else>
                 <p> non ci sono tipi </p>
             </div>
