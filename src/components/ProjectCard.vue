@@ -9,10 +9,10 @@ export default {
 
 <template>
     <div class="card h-100">
-        <div class="card-title">
-            <h6>{{ project.title }}</h6>
-        </div>
         <div class="card-body">
+            <div class="card-title">
+                <h5>{{ project.title }}</h5>
+            </div>
 
             <h6>lista tecnologie</h6>
             <ul v-if="(project.technologies.length > 0)">
@@ -28,6 +28,9 @@ export default {
             </p>
             <div v-else>
                 <p> non ci sono tipi </p>
+            </div>
+            <div>
+                <router-link :to="{name: 'SingleProjectPage', params: {slug: project.slug}}"  class="btn btn-primary" > dettagli</router-link>
             </div>
         </div>
     </div>
